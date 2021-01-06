@@ -11,8 +11,8 @@ before_deploy:
 
 deploy:
   provider: script
-  script: docker push cmoranp/node
+  script: docker push cmoranp/pruebaweb
   on:
     branch: master
-    
+
 
