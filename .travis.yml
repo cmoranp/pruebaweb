@@ -6,3 +6,13 @@ scripts:
   - docker build -t cmoranp/node .
   - docker images cmoranp/node
 
+before_deploy:
+  - docker login -u cmoranp -p J$abina79
+
+deploy:
+  provider: script
+  script: docker push cmoranp/node
+  on:
+    branch: master
+    
+
